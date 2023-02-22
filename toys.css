@@ -1,0 +1,22 @@
+nav{
+    border: 1px solid red;
+}
+nav>div{
+    border: 1px solid black;
+}
+
+#heading{
+    width:60%;
+    margin: auto;
+    padding:15px;
+    background-color: yellow;
+}
+#short{
+    width:60%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.container{
+    margin-top: 40px;
+}
