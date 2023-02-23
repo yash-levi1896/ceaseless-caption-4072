@@ -1,4 +1,5 @@
-*{
+*{  
+  
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .wrapper{
@@ -13,7 +14,7 @@
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-end: span 3;
-       height: 700px;
+       height: 1000px;
        position: fixed;
        width: 19.8%;
        
@@ -66,4 +67,65 @@
     padding-top: 20px;
     font-size: 1.3vw;
     margin-right: 10px;
+}
+
+.catP{
+    font-size: 2vw;
+}
+
+#category{
+   
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#category div{
+    
+    font-size: 1.7vw;
+    font-weight: 500;
+    width:70%;
+    margin: 20px;
+    margin-right: 0px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 22px 0;
+    padding-left: 25px;
+}
+#category>div:nth-child(1){
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 22px 0;
+}
+
+.form{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: black;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.form form{
+    text-align: center;
+}
+
+.form form input[type='text']{
+    width:81%;
+    margin-left:0;
+    outline: none;
+}
+.form form input{
+    height: 25px;
+    
+}
+.form form input[type='submit']{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: 0px;
+    height: 29px;
+    width: 16%;
+
 }
