@@ -1,47 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Play', sans-serif;
     box-sizing: border-box;
 }
 #container{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    
+    /* background-image: url(""); */
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
 }
 .nav{
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    box-shadow: rgba(95, 37, 37, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     padding: 15px;
     height: 10%;
-    /* color: blue; */
-    background-color: yellow; 
- }
- 
-
-form{
-    width: 32%;
-    height: 60%;
-    border: solid rgb(122, 139, 95);
-    margin: auto;
-    margin-top: 150px;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-    padding: 40px;
-    /* border-radius: 10px; */
-    background-color: rgb(139, 139, 119); 
-    /* border-radius: 100%; */
-    
- }
-form>input{
-    height: 15%;
-    color: black;
-    text-align: center;
+    color: blue;
+    background-color: rgb(39,43,44);
+}
+.nav>button{
+    /* height: 15%; */
+    color: aliceblue;
+    /* text-align: center; */
+    /* border: solid crimson; */
     border: none;
-    background-color: rgb(206, 226, 20);
+    background-color: rgb(20, 19, 19);
     border-radius: 50%;
     margin: 5px 0px;
+    width: 15%;
+}
+.submit:hover{
+    background-color: rgb(212, 71, 71);
+    cursor: pointer;
+}
+form{
+    width: 35%;
+    height: 100%;
+    /* border: solid red; */
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 40px;
+    border-radius: 1%;
+    /* background-color: pink; */
+    /* display: block;
+    text-align: center; */
+    /* border-radius: 100%; */
+    
+}
+form>img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20%;
+    
+}
+form>input{
+    height: 15%;
+    color: aliceblue;
+    text-align: center;
+    border: none;
+    background-color: rgb(26, 24, 24);
+    border-radius: 2%;
+    margin: 20px 0px;
     width: 100%;
 }
 
+#signup,#admin{
+    display: none;
+}
