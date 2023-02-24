@@ -10,37 +10,42 @@
 <body>
     <div id="container">
         <div class="nav">
-             <a href="" ><button class="button" style="color: white; width: 100%; border: none; background-color: rgb(54, 11, 11); font-size: large; border-radius: 100%;">❌</button></a>
+             <a href="" ><button class="button" style="color: black; width: 100%; border: none; font-size: 35px; margin-right: 20px; border-radius: 100%;">X</button></a>
         </div>
         <form id="login">
             <img src="./logo for website.png" alt="">
+            <p class="heading">Sign In</p>
+            <label for="email" >Email or Phone Number</label>
             <input type="email"  placeholder="Email" id="email" required>
-            
-            <input type="password"  placeholder="Password" id="password" required>
-            
-            <input type="submit" id ="submit" >
+            <label for="password">Password*</label>
+            <input type="password"  placeholder="Password" id="password" class="myInput" style="width: 100% ; display: inline;  " required>
+            <!-- <input type="checkbox" onclick="myFunction()" style="display: inline;"> -->
+            <input type="submit" class ="submit">
+            <input type="button" class="submit" id ="createAccount" value="Create Account">
         </form>
         <form id="signup">
             <img src="./logo for website.png" alt="">
-
-            <input type="text"  placeholder="Name" id ="name2" required>
-            
+            <p class="heading">Create an account</p>
+            <label for="name2" >First Name</label>
+            <input type="text"  placeholder="First Name" id ="name2" required>
+            <label for="name3" >Last Name</label>
+            <input type="text"  placeholder="Last Name" id ="name3" required>
+            <label for="email2" >Email</label>
             <input type="email"  placeholder="Email" id ="email2" required>
-            
-            <input type="password" placeholder="Password" id ="password2" required>
-            
-            <input type="password" placeholder="Re-enter the password" id ="reenter2" required>
-            
-            <input type="submit" id ="submit2">
+            <label for="password2">Password*</label>
+            <input type="password" placeholder="Password" id ="password2" class="myInput" required>  
+            <input type="submit" class ="submit">
         </form>
         <form id="admin">
+            
             <img src="./logo for website.png" alt="">
-
-            <input type="email"  placeholder="Email" id="email" required>
+            <p class="heading">Admin Login Page</p>
+            <label for="email3" >Admin Email</label>
+            <input type="email"  placeholder="Email" id="email3" required>
+            <label for="password3" >Admin Password****</label>
+            <input type="password"  placeholder="Password" id="password3" class="myInput" required>
             
-            <input type="password"  placeholder="Password" id="password" required>
-            
-            <input type="submit" id ="submit" >
+            <input type="submit" class ="submit" >
         </form>
     </div>
     
