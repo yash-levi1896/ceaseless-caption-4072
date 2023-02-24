@@ -280,5 +280,16 @@ display: block;
   }
 
 #container{
-    
+    display: grid;
+    width: 60%;
+    border: 1px solid red;
+    margin: auto;
+    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+    gap: 20px;
+}
+#container img{
+  width:100%;
+}
+#container>div{
+  border: 1px solid black;
 }
