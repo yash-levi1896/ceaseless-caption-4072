@@ -34,10 +34,11 @@
         </div>
         <div class="box3">
 
-            <div>
+            <div class="para">
                 <h4>
                     Total Product: <span id="total-product">0</span>
                 </h4>
+                <button id="add-product">Add Product</button>
             </div>
             <div class="container">
                 <!-- append card here -->
@@ -50,12 +51,34 @@
       </div>
       <div class="popup">
         <form>
+            <label for="card-id">Enter ID</label>
           <input type="text" placeholder="id" id="card-id">
+          <label for="card-title">Title</label>
           <input type="text" placeholder="title" id="card-title">
+          <label for="card-image">Image</label>
+          <input type="text" placeholder="image" id="card-image">
+          <label for="card-category">category</label>
           <input type="text" placeholder="category" id="card-category">
+          <label for="card-price">Price</label>
           <input type="text" placeholder="price" id="card-price">
+          <label for="card-rating">Rating</label>
           <input type="text" placeholder="rating" id="card-rating">
-          <input type="submit" value="Submit">
+          <input type="submit" value="Edit">
+        </form>
+     </div>
+      <div class="pro-popup">
+        <form>
+          <label for="pro-card-title">Title</label>
+          <input type="text" placeholder="title" id="pro-card-title">
+          <label for="pro-card-image">Image</label>
+          <input type="text" placeholder="image" id="pro-card-image">
+          <label for="pro-card-category">category</label>
+          <input type="text" placeholder="category" id="pro-card-category">
+          <label for="pro-card-price">Price</label>
+          <input type="text" placeholder="price" id="pro-card-price">
+          <label for="pro-card-rating">Rating</label>
+          <input type="text" placeholder="rating" id="pro-card-rating">
+          <input type="submit" value="Edit">
         </form>
      </div>
 </body>
