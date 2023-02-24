@@ -494,6 +494,127 @@ display: block;
 }
 
 
+.view{
+  /* border: 2px solid red; */
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.view-2{
+  /* border: 2px solid blue; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.view div img{
+  width: 100%;
+}
+
+.img-2{
+  /* border: 2px solid black; */
+  width: 60%;
+  margin: auto;
+}
+.view div p{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}
+.view div h4{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+
+/* .btn{
+  width: 100px;
+  height: 30px;
+} */
+
+.btn {
+  margin-top: 10px;
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 6px 31px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+  font-size: 15px;
+  
+}
+.btn:hover{
+    color: black;
+    box-shadow: rgb(5, 5, 1) 1px 4px 10px;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+ 
+  background: #f4e807;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+
+.shop-3{
+  /* border: 1px solid; */
+  margin-top: 70px;
+}
+
+.shop-3 hr{
+  /* display: flex; */
+  margin-top: 35px;
+  width: 20%;
+  margin-left: 227px;
+}
+.shop-3 h1{
+  text-align: center;
+  /* margin-left: 550px; */
+  margin-top: -20px;
+}
+.shop-3 #div-3{
+  /* border: 2px solid blue; */
+  width: 50%;
+  margin-left: 750px;
+  /* margin-bottom: 70px; */
+}
+.shop-3 #div-3 hr{
+  width: 320px;
+  margin-top: -15px;
+
+}
+
+
 
 
 
