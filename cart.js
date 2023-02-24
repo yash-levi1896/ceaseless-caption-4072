@@ -1,11 +1,12 @@
 let mainSection = document.getElementById('cards');
 let total = 0;
+
  function fetchData() {
     fetch(`https://mock-apai.onrender.com/cart`, {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json'
-    }
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
     .then((res) => res.json())
     .then((data) => {
@@ -13,8 +14,9 @@ let total = 0;
         displayData(data);
     })
 };
-
 fetchData();
+
+
 function displayData (data) {
     mainSection.innerHTML = null;
     data.forEach(el => {
@@ -26,10 +28,13 @@ function displayData (data) {
         let brandName = document.createElement('p');
         brandName.innerText = el.title;
         let rating = document.createElement('p');
-        rating.innerText = el.Rating;
+        rating.innerText = 'Rating: '+el.Rating;
         let price = document.createElement('p');
-        price.innerText = el.price;
-        total += +el.price;
+        price.innerText = '$'+el.price;
+        let category = document.createElement('p');
+        category.innerText = el.category;
+        total += (+el.price);
+
         let removeBtn = document.createElement('button');
         removeBtn.innerText = 'Remove'
         removeBtn.classList.toggle('remove-btn');
@@ -43,15 +48,15 @@ function displayData (data) {
                 //displayData(data.data);
                 fetchData();
             })
+            //location.reload();
         });
 
         let addTofavBtn = document.createElement('button');
         addTofavBtn.innerText = 'Favorite'
         addTofavBtn.classList.toggle('fav-btn')
-        card.append(img, brandName, price, removeBtn, addTofavBtn);
+        card.append(img, brandName, category, price, removeBtn, addTofavBtn);
         mainSection.append(card);
-        console.log(+el.price);
-        document.getElementById('cart-total').innerHTML = total;
+        document.getElementById('cart-total').innerHTML = 'Cart-Total: $'+total;
     });
 }
 
