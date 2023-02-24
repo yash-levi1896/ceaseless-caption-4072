@@ -10,30 +10,58 @@
 <body>
     <div class="header">
         <div class="left-side">
-            <div class="address-bar">Address</div>
-            <div class="car-pay"> DEBIT/CREDIT CARD </div>
+            <div class="address-bar">ADDRESS</div>
+            <div class="card-pay"> DEBIT/CREDIT CARD </div>
             <div class="upi-pay">UPI</div>
             <div class="cod-pay">COD</div>
         </div>
-        <div class="reght-side">
-            <div class="address-input">            </div>
-            <div class="card-input">
+        <div class="right-side">
+            <div class="address-input" id="address-input">
+                <form action="">
+                    <div>
+                        <label for="name">Name</label>
+                        <input required type="text" id="name" name="name" autocomplete="name" enterkeyhint="next">
+                    </div>
+                    <div>
+                        <label for="address">Apartment, Block, Floor</label>
+                        <input type="text" id="address" name="address" autocomplete="address" required enterkeyhint="next"></input>
+                    </div>
+                    <div>
+                        <label for="street-address">Street Address</label>
+                        <input type="text" id="street-address" name="street-address" autocomplete="street-address" required enterkeyhint="next"></input>
+                    </div>
+                    <div>
+                        <label for="nearest">Nearest</label>
+                        <input type="text" id="nearest" name="nearest" autocomplete="nearest" required enterkeyhint="next"></input>
+                    </div>
+                    <div>
+                        <label for="pincode">Pincode</label>
+                        <input type="number" id="pincode" name="pincode" autocomplete="pincode" required enterkeyhint="next"></input>
+                    </div>
+                    <div>
+                        <label for="number">Mobile Number</label>
+                        <input type="number" id="number" name="number" autocomplete="number" required enterkeyhint="next"></input>
+                    </div>
+                    <button>Proceed</button>
+                </form>
+            </div>
+            <div class="card-input" id="card-input">
                 <label for=""> Debit/Credit Card Number</label><br>
-                <input type="number"><br>
-                <label for="">Name</label><br>
-                <input type="name"><br>
+                <input type="number" placeholder="should be 16"><br>
+                <label for="">Card Holder Name</label><br>
+                <input type="name" placeholder="Name"><br>
                 <label for="">Expiry Date</label><br>
-                <input type="date"><br>
+                <input type="text" placeholder="month/year"><br>
                 <label for="">CVV</label><br>
-                <input type="number"><br>
-                <button>PAY 1234</button>
+                <input type="number" placeholder="CVV number"><br>
+                <button>PAY 12345</button>
             </div>
-            <div class="upi-input">
+            <div class="upi-input" id="upi-input">
                 <label for=""> UPI ID</label><br>
-                <input type="text"><br>
+                <input type="text" placeholder="abcd@ybl"><br>
                 <button>PAY 1234</button>
             </div>
-            <div class="cod-input">
+            <div class="cod-input" id="cod-input">
                 <button>PAY 1234</button>
             </div>
         </div>

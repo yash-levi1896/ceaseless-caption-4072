@@ -7,7 +7,118 @@
     display: flex;
 }
 
+/* => Left-Side Bar <= */
+.left-side {
+    width: 300px;
+    height: 100vh;
+    border: 1px solid yellow;
+    padding: 3px 8px;
+    text-align: center;
+    background-color: #fff200;
+}
+
 .address-bar {
-    width: 150px;
-    height: 40px;
+    padding: 15px;
+    cursor: pointer;
+    border: solid 2px #fff200;
+}
+
+.address-bar:hover {
+    border: solid 2px goldenrod;
+    background-color: rgb(235, 222, 42);
+}
+
+.card-pay {
+    padding: 15px;
+    cursor: pointer;
+    border: solid 2px #fff200;
+}
+
+.card-pay:hover {
+    border: solid 2px goldenrod;
+    background-color: rgb(235, 222, 42);
+}
+
+.upi-pay {
+    padding: 15px;
+    cursor: pointer;
+    border: solid 2px #fff200;
+}
+
+.upi-pay:hover {
+    border: solid 2px goldenrod;
+    background-color: rgb(235, 222, 42);
+}
+
+.cod-pay {
+    padding: 15px;
+    cursor: pointer;
+    border: solid 2px #fff200;
+}
+
+.cod-pay:hover {
+    border: solid 2px goldenrod;
+    background-color: rgb(235, 222, 42);
+}
+
+/* => Right-Side Bar <= */
+
+.right-side {
+    /* background: rgb(172, 245, 245); */
+    width: 50%;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+
+input {
+    width: 95%;
+    outline-style: none;
+    padding: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+input:focus {
+    border: 2px solid black;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+button {
+    width: 94%;
+    height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 16px 8px;
+    cursor: pointer;
+    background-color: yellow;
+    border: solid 2px #fff200;
+}
+
+button:hover {
+    border: solid 2px goldenrod;
+    background-color: rgb(235, 222, 42);
+}
+
+.address-input {
+    height: 100vh;
+    background: url('https://mthcdn.azureedge.net/-/media/corporate/landing-pages/ee-landing-pages/ee-updates/mth_ee-video_banner_1000x450_v1.ashx?h=450&la=en&w=1000&rev=5609e05a0d37423197642c1fd3a7b68a&hash=70495CF02F0B2912E4200F7BD802CC02C0807A0E');
+}
+.card-input {
+    display: none;
+    height: 100vh;
+    object-fit: cover;
+    background: url('https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/blogs/images/new-credit-card-rules-effective-from-july-1-2022.jpg');
+}
+
+.upi-input {
+    display: none;
+}
+
+.cod-input {
+    display: none;
 }
