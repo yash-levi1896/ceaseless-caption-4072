@@ -10,7 +10,7 @@
 /* => Left-Side Bar <= */
 .left-side {
     width: 300px;
-    height: 100vh;
+    height: 98vh;
     border: 1px solid yellow;
     padding: 3px 8px;
     text-align: center;
@@ -93,7 +93,7 @@ button {
     height: 35px;
     font-size: 15px;
     font-weight: bold;
-    margin: 16px 8px;
+    margin: 16px 10px;
     cursor: pointer;
     background-color: yellow;
     border: solid 2px #fff200;
@@ -105,20 +105,66 @@ button:hover {
 }
 
 .address-input {
-    height: 100vh;
+    height: 98vh;
     background: url('https://mthcdn.azureedge.net/-/media/corporate/landing-pages/ee-landing-pages/ee-updates/mth_ee-video_banner_1000x450_v1.ashx?h=450&la=en&w=1000&rev=5609e05a0d37423197642c1fd3a7b68a&hash=70495CF02F0B2912E4200F7BD802CC02C0807A0E');
 }
 .card-input {
     display: none;
-    height: 100vh;
+    height: 98vh;
     object-fit: cover;
     background: url('https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/blogs/images/new-credit-card-rules-effective-from-july-1-2022.jpg');
 }
 
 .upi-input {
     display: none;
+    height: 98vh;
+    background: url('https://assets.entrepreneur.com/content/3x2/2000/1604423734-upi-paymentedit.jpg');
 }
 
 .cod-input {
     display: none;
+    height: 98vh;
+    background: url('https://viame.ae/wp-content/uploads/2019/07/How-cash-on-delivery-is-beneficial-for-your-business-1024x743.jpg');
+}
+
+body {
+    position: relative;
+}
+
+
+.feedback {
+    display: none;
+    position: absolute;
+    width: 350px;
+    height: 180px;
+    /* border: solid 1px black; */
+    margin: auto;
+    top: 40%;
+    bottom: 45%;
+    right: 45%;
+    left: 35%;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+#pay-fun {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    font-size: 25px;
+    left: 45%;
+    display: none;
+}
+
+#feed-input {
+    margin-top: 30px;
+    width: 300px;
+}
+
+#feed-input:focus {
+    border: solid 1px gold;
+}
+.feedbtn {
+    width: 150px;
+    border-radius: 5px;
 }
