@@ -90,6 +90,6 @@ form>label{
     margin-bottom: -4%;
 }
 
-/* #signup,#admin{
+#signup,#admin{
     display: none;
-} */
+}
