@@ -3,13 +3,31 @@ let addressBtn = document.querySelector('.address-bar');
 let cardBtn = document.querySelector('.card-pay');
 let upiBtn = document.querySelector('.upi-pay');
 let codBtn = document.querySelector('.cod-pay');
-
 /// => input Buttons => ////
 let addressInput = document.getElementById('address-input');
 let cardInput = document.getElementById('card-input');
 let upiInput = document.getElementById('upi-input');
 let codInput = document.getElementById('cod-input');
 
+//// => Payment Button => ////
+let addressSaveBtn = document.getElementById('address-btn');
+let cardPayBtn = document.getElementById('card-btn');
+let upiPayBtn = document.getElementById('upi-btn');
+let codPayBtn = document.getElementById('cod-btn');
+
+// function display() {
+//        document.getElementById('pay-fun').style.display = 'block';
+//        document.querySelector('.header').style.display = 'none';
+//        setTimeout(() => {
+//         document.getElementById('pay-fun').style.display = 'none';
+//        document.querySelector('.header').style.display = 'block';        
+//        }, 1000);
+
+//        setTimeout(() => {
+//         document.getElementById('pay-fun').style.display = 'block';
+//         document.querySelector('.header').style.display = 'block';
+//        }, 1500);
+// }
 
 addressBtn.addEventListener('click', function () {
     cardInput.style.display = 'none';
@@ -39,3 +57,42 @@ codBtn.addEventListener('click', function () {
     codInput.style.display = 'block';
 });
 
+
+addressSaveBtn.addEventListener('click', function () {
+    alert('Your Address has been saved.');
+});
+
+cardPayBtn.addEventListener('click', function () {
+    if(
+        document.getElementById('number').value==''||
+        document.getElementById('name').value||
+        document.getElementById('month').value||
+        document.getElementById('cvv').value 
+        )
+        {
+        alert('wrong credential.')
+    }else{
+        alert('Your Order has been placed.')
+        setTimeout(() => {
+            window.location.href='index.html'
+        }, 1000);
+    }
+});
+
+upiPayBtn.addEventListener('click', function () {
+    if(document.getElementById('upiInput').value == ""){
+        alert('wrng credential.')
+    }else{
+        alert('Your Order has been placed.')
+        setTimeout(() => {
+            window.location.href='index.html'
+        }, 1000);
+    }
+});
+
+codPayBtn.addEventListener('click', function () {
+    alert('Your Order has been placed.')
+        setTimeout(() => {
+            window.location.href='index.html'
+        }, 1000);
+})

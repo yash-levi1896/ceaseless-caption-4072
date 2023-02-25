@@ -47,8 +47,9 @@ function displayData (data) {
                 console.log(data);
                 //displayData(data.data);
                 fetchData();
+                window.location.reload();
             })
-            //location.reload();
+            
         });
 
         let addTofavBtn = document.createElement('button');
