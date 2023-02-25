@@ -3,7 +3,7 @@
     // let logIn = document.querySelector('.nav>button:nth-child(2)');
     let logInForm = document.querySelector('#login')
     let signUpForm = document.querySelector('#signup')
-    let adminbutton = document.querySelector("#adminbutton")
+    let adminbutton = document.querySelectorAll(".adminbutton")
     let adminForm = document.querySelector("#admin")
     let signupbutton = document.querySelector("#signupbutton")
     let Email = document.querySelector("#email")
@@ -28,7 +28,7 @@
       .then(data=>{
         console.log(data)
         let email = Email.value;
-        let password = password.value;
+        let password = Password.value;
         let flag = false;
         for(let i=0; i<data.length; i++){
           if(email==data[i].email && password == data[i].password){
@@ -37,6 +37,11 @@
         }
           if(flag === true){
             alert("Sign In Successful!!")
+            window.location.href = "./index.html"
+          }else{
+            alert("Create Account")
+            logInForm.style.display = 'none';
+            signUpForm.style.display = 'block';
           }
       })
 
@@ -45,7 +50,11 @@
     //     logInForm.style.display = 'block';
     //     signUpForm.style.display = 'none';    
     // })
-    adminbutton.addEventListener("click",function(){
+    adminbutton[0].addEventListener("click",function(){
+      logInForm.style.display = 'none';
+      adminForm.style.display = 'block'; 
+    })
+    adminbutton[1].addEventListener("click",function(){
       logInForm.style.display = 'none';
       adminForm.style.display = 'block'; 
     })
