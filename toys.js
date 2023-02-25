@@ -3,9 +3,24 @@ let button=document.getElementById("button-wrapper");
 let filt=document.getElementById("filter");
 const url=`https://mock-apai.onrender.com/toys`;
 let id;
-let btns=document.getElementById("sort");
+let btns=document.getElementById("sortr");
 let btnp=document.getElementById("sortp");
+let search=document.querySelector(".search-input");
+let searchbtn=document.querySelector(".search-btn");
+let cartl=document.getElementById("cart-length");
 let employeedata=[];
+let cardData=[];
+
+search.addEventListener("keydown",(e)=>{
+    if (e.key == "Enter" && search.value != "") {
+        //location.href = 'pages/results/results.html';
+        //searchQuery = searchBar.value;
+        //console.log(searchQuery);
+        console.log("hi");
+        fetchandrendercard(`?q=${search.value}`);
+    }
+    
+})
 
 filt.addEventListener("change",()=>{
     if(filt.value==""){
@@ -14,15 +29,27 @@ filt.addEventListener("change",()=>{
        fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${1}`)
     }
 });   
-btns.addEventListener("click",()=>{
-    employeedata.sort(function(a,b){return b.Rating-a.Rating});
-
-    display(employeedata)
+btns.addEventListener("change",()=>{
+    if(btns.value=="asc"){
+        
+        employeedata.sort(function(a,b){return a.Rating-b.Rating});
+        display(employeedata);
+    }
+    else if(btns.value=="desc"){
+        employeedata.sort(function(a,b){return b.Rating-a.Rating});
+    display(employeedata);
+    }
 })    
 btnp.addEventListener("click",()=>{
-    employeedata.sort(function(a,b){return a.price-b.price});
-
-    display(employeedata)
+    if(btnp.value=="asc"){
+        employeedata.sort(function(a,b){return a.price-b.price});
+        display(employeedata)
+    }
+    else if(btnp.value=="desc"){
+        employeedata.sort(function(a,b){return b.price-a.price});
+        display(employeedata)
+    }
+   
 })    
 
 fetchandrendercard(`?_page=${1}&_limit=12`)
@@ -43,8 +70,16 @@ function fetchandrendercard(queryParamstring=null){
         employeedata=data;
        // showpagination(data.totalPages)
         display(employeedata);
+        cartl.innerHTML=cardData.length;
     })
 }
+fetch(`https://mock-apai.onrender.com/cart`)
+.then((res)=>{
+    return res.json();
+})
+.then((data)=>{
+    cardData=data;
+})
 
 
 function display(data){
@@ -63,10 +98,40 @@ function display(data){
         rating.innerText=`Rating: ${element.Rating}`;
         let btn=document.createElement("button");
         btn.innerText="Add to cart";
+        btn.addEventListener("click",()=>{
+            // console.log(element);
+            // console.log(cardData)
+             if(checkDuplicate(element)){
+                 alert("Product is already in the cart");
+             }
+             else{
+                element.quantity=1;
+                fetch(`https://mock-apai.onrender.com/cart`,{
+                    method:"POST",
+                    body:JSON.stringify(element),
+                    headers:{'content-type':'application/json'}
+                });
+                console.log(element)
+                alert("Product added to the cart");
+                cartl.innerHTML=cardData.length;
+             }
+        })
         div2.append(title,price,rating,btn)
         card.append(im,div2);
         container.append(card)
     });
+}
+
+function checkDuplicate(x){
+    if(cardData.length===0){
+        return false;
+    }
+    for(let i=0;i<cardData.length;i++){
+        if(cardData[i].id==x.id){
+            return true;
+        }
+    }
+    return false;
 }
 
 function showpagination(totalitems,x){

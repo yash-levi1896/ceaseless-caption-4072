@@ -157,7 +157,30 @@ background-color: #ddd;
 display: block;
 }
 
+.side-filter{
+  /* border: 2px solid blue; */
+  background-color: #c7c3c3;
+  width: 100%;
+  height: 60px;
+  line-height: 25px;
+  margin-top: -5px;
+}
+.side-filter h4{
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.side-filter p{
+  font-size: 15px;
+  margin-left: 20px;
+}
 
+.fa-cart-shopping{
+  margin-left: 93%;
+  margin-top: -30px;
+  display: block;
+  font-size: 30px;
+}
 
 
 

@@ -44,7 +44,7 @@
   <div class="search-box">
     <input
       class="search-input"
-      type="text"
+      type="search"
       placeholder="Search for a product"
     />
     <button class="search-btn"><i class="fa fa-search"></i></button>
@@ -52,6 +52,16 @@
   <i class="fa fa-light fa-user"></i>
   <h3>Sign In</h3>
 </div>
+
+<!-- second nav -->
+<div class="side-filter">
+  <h4>My Store:</h4>
+  <p>2174 Gallatin Pike N</p>
+
+  <i class="fa fa-light fa-cart-shopping"><span id="cart-length">:0</span></i>
+</div>
+
+
 <!-- toys section -->
     <div id="heading">
         <h1>Toys</h1>
@@ -103,8 +113,17 @@
     <option value="Vechicles & Train">Vechicles & Train</option>
     <option value="action-figure">Action Figures</option>
   </select>
-  <button id="sort">Sort by rating</button>
-  <button id="sortp">Sort by price</button>
+  <select id="sortr">
+    <option value="">Sort by rating</option>
+    <option value="asc">Low to High</option>
+    <option value="desc">High to Low</option>
+  </select>
+  <select id="sortp">
+    <option value="">Sort by price</option>
+    <option value="asc">Low to High</option>
+    <option value="desc">High to Low</option>
+  </select>
+  
   <div id="container">
       
   </div>
