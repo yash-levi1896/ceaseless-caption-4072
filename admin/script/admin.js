@@ -93,7 +93,10 @@ function display(info,totalcount){
         })
        })
    }
-
+ let logout=document.querySelector(".logout");
+ logout.addEventListener("click",()=>{
+    window.location.href="../index.html"
+ })
    
    popup.addEventListener("submit", (event) => {
        event.preventDefault();
