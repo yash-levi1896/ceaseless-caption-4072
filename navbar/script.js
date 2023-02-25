@@ -47,3 +47,20 @@ productContainers.forEach((item, i) => {
 //         el.scrollLeft -= containerWidth1;
 //     })
 // })
+
+let cart_cout = document.getElementById("cart-cout")
+
+
+    fetch(`https://mock-apai.onrender.com/cart`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        cart_cout.textContent=data.length;
+    })
+
+
