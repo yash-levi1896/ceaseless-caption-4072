@@ -7,3 +7,43 @@ document.getElementById('prev').onclick = function(){
     document.getElementById('slide').prepend(lists[lists.length - 1]);
 }
   
+
+// for bottom carosal
+
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+
+
+// end scroller
+
+
+// const productContainers2 = [...document.querySelectorAll('.product-container2')];
+// const nxtBtn1 = [...document.querySelectorAll('.nxt-btn')];
+// const preBtn1 = [...document.querySelectorAll('.pre-btn')];
+
+// productContainers2.forEach((el, j) => {
+//     let containerDimensions2 = el.getBoundingClientRect();
+//     let containerWidth1 = containerDimensions2.width;
+
+//     nxtBtn1[j].addEventListener('click', () => {
+//         el.scrollLeft += containerWidth1;
+//     })
+
+//     preBtn1[j].addEventListener('click', () => {
+//         el.scrollLeft -= containerWidth1;
+//     })
+// })
