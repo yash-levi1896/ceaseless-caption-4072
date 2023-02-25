@@ -93,10 +93,10 @@ function showpagination(totalitems,x){
             if(filt.value==""){
             fetchandrendercard(`?_page=${id}&_limit=12`)
             }
-            else if(filt.value=="art & craft"){
+            else if(filt.value=="art-craft"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
-            else if(filt.value=="Puzzle games & books"){
+            else if(filt.value=="Puzzle games-books"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
             else if(filt.value=="action-figure"){
@@ -105,7 +105,7 @@ function showpagination(totalitems,x){
             else if(filt.value=="Dolls"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
-            else if(filt.value=="Vehicle & Train"){
+            else if(filt.value=="Vehicle-Train"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
             
