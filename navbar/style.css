@@ -96,17 +96,17 @@
 /* .userbutton */
 .fa-user{
   color: rgb(252, 248, 248);
-  font-size: 19px;
+  font-size: 25px;
   margin-left: 95%;
   /* border: 2px solid red; */
   display: block;
-  margin-top: -37px;
+  margin-top: -32px;
 }
 
 h3{
-  margin-left: 94%;
+  margin-left: 93%;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 /*  */
