@@ -3,9 +3,11 @@
     // let logIn = document.querySelector('.nav>button:nth-child(2)');
     let logInForm = document.querySelector('#login')
     let signUpForm = document.querySelector('#signup')
-    let adminbutton = document.querySelectorAll(".adminbutton")
+    let adminbutton1 = document.querySelector("#adminbutton1")
+   
+    let adminbutton2 = document.querySelector("#adminbutton2")
     let adminForm = document.querySelector("#admin")
-    let signupbutton = document.querySelector("#signupbutton")
+    // let signupbutton = document.querySelector("#signupbutton")
     let Email = document.querySelector("#email")
     let Password = document.querySelector("#password")
     //let signinbutton = document.querySelector("#signinbutton")
@@ -15,8 +17,36 @@
         signUpForm.style.display = 'block';
         
     })
-    signupbutton.addEventListener("click",function(){
-       
+    // <label for="name2" >First Name</label>
+    //         <input type="text"  placeholder="First Name" id ="name2" required>
+    //         <label for="name3" >Last Name</label>
+    //         <input type="text"  placeholder="Last Name" id ="name3" required>
+    //         <label for="email2" >Email</label>
+    //         <input type="email"  placeholder="Email" id ="email2" required>
+    //         <label for="password2">Password*</label>
+    //         <input type="password" placeholder="Password" id ="password2" class="myInput" required></input>
+
+    let firstname=document.getElementById("name2");
+    let lastname=document.getElementById("name3");
+    let regEmail=document.getElementById("email2");
+    let regPassword=document.getElementById("password2");
+
+    signUpForm.addEventListener("submit",(el)=>{
+       el.preventDefault();
+        let obj={
+          firstname:firstname.value,
+          lastname:lastname.value,
+          email:regEmail.value,
+          password:regPassword.value,
+        }
+        console.log(obj)
+        fetch(`https://mock-apai.onrender.com/register`,{
+          method:"POST",
+          body:JSON.stringify(obj),
+          headers:{
+            "Content-Type":"application/json"
+          }
+          })
       logInForm.style.display = 'block';
       signUpForm.style.display = 'none';
       
@@ -50,15 +80,27 @@
     //     logInForm.style.display = 'block';
     //     signUpForm.style.display = 'none';    
     // })
-    adminbutton[0].addEventListener("click",function(){
+    adminbutton1.addEventListener("click",function(){
       logInForm.style.display = 'none';
       adminForm.style.display = 'block'; 
     })
-    adminbutton[1].addEventListener("click",function(){
-      logInForm.style.display = 'none';
+    adminbutton2.addEventListener("click",function(){
+      signUpForm.style.display = 'none';
       adminForm.style.display = 'block'; 
     })
-    
+    let adminName=document.getElementById("name4");
+    let adminPassword=document.getElementById("password3")
+
+    adminForm.addEventListener("submit",e=>{
+      e.preventDefault();
+
+      if( adminName.value=="admin" && adminPassword.value=="admin" ){
+        alert("admin login successfully!!")
+        window.location.href="./admin/admin.html"
+      }else{
+        alert("Name or Password is Incorrect")
+      }
+    })
     //  signUpForm.addEventListener("submit",function(ele){
     //       ele.preventDefault();
     //       let element = {
