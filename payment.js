@@ -64,10 +64,10 @@ addressSaveBtn.addEventListener('click', function () {
 
 cardPayBtn.addEventListener('click', function () {
     if(
-        document.getElementById('number').value==''||
-        document.getElementById('name').value||
-        document.getElementById('month').value||
-        document.getElementById('cvv').value 
+        document.getElementById('numberinput').value==''||
+        document.getElementById('nameinput').value==''||
+        document.getElementById('month').value==''||
+        document.getElementById('cvv').value==''
         )
         {
         alert('wrong credential.')
@@ -77,6 +77,8 @@ cardPayBtn.addEventListener('click', function () {
             window.location.href='index.html'
         }, 1000);
     }
+    let x = document.getElementById('numberinput').value;
+    console.log(x);
 });
 
 upiPayBtn.addEventListener('click', function () {

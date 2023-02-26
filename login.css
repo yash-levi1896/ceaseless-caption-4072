@@ -11,8 +11,6 @@ body{
 #container{
     width: 98%;
     height: 100vh;
-    /* background-image: url(""); */
-    
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -22,16 +20,12 @@ body{
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     padding: 15px;
     height: 10%;
     color: blue;
-    /* background-color: rgb(39,43,44); */
 }
 .nav>button{
-    /* height: 15%; */
     color: aliceblue;
-    /* text-align: center; */
     /* border: solid crimson; */
     border: none;
     background-color: rgb(20, 19, 19);
@@ -54,18 +48,14 @@ form{
     padding: 40px;
     border-radius: 1%;
     background-color: white;
-    /* display: block;
-    text-align: center; */
-    /* border-radius: 100%; */
-    
 }
 form>img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 20%;
+    width: 80%;
     background-color: white;
-    
 }
 .heading{
     text-align: center;
@@ -87,9 +77,8 @@ form>input{
 form>label{
     /* border: solid red; */
     display: block;
-    margin-bottom: -4%;
+    margin-bottom: -3%;
 }
-
 #signup,#admin{
     display: none;
 }
