@@ -21,6 +21,18 @@
   
 }
 
+.btn{
+  /* width: 90px;
+  height: 30px; */
+  padding: 10px;
+  font-size: 17px;
+  background-color: yellow;
+  color: black;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
 .links {
   width: 540px;
   /* color: yellow; */
