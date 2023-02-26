@@ -537,7 +537,7 @@ display: block;
   height: 30px;
 } */
 
-.btn {
+.btn-2 {
   margin-top: 10px;
   border: none;
   display: block;
@@ -556,17 +556,17 @@ display: block;
   box-shadow: 0 5px 15px rgba(0,0,0,0.20);
 }
 
-.btn span {
+.btn-2 span {
   position: relative; 
   z-index: 1;
   font-size: 15px;
   
 }
-.btn:hover{
+.btn-2:hover{
     color: black;
     box-shadow: rgb(5, 5, 1) 1px 4px 10px;
 }
-.btn:after {
+.btn-2:after {
   content: "";
   position: absolute;
   left: 0;
@@ -581,7 +581,7 @@ display: block;
   transform: translateX(-98%) translateY(-25%) rotate(45deg);
 }
 
-.btn:hover:after {
+.btn-2:hover:after {
   -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
   transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
@@ -1434,6 +1434,58 @@ font-size: 40px;
   margin-top: 18px;
   margin-left: 30px;
 }
+.btn {
+  margin-top: 10px;
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 6px 31px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+  font-size: 15px;
+  
+}
+.btn:hover{
+    color: black;
+    box-shadow: rgb(5, 5, 1) 1px 4px 10px;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+ 
+  background: #f4e807;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+
+
+
 
 .product-short-description {
   width: 100%;
