@@ -7,10 +7,19 @@ let btns=document.getElementById("sortr");
 let btnp=document.getElementById("sortp");
 let search=document.querySelector(".search-input");
 let searchbtn=document.querySelector(".search-btn");
-let cartl=document.getElementById("cart-length");
-let employeedata=[];
+let cartl=document.getElementById("cart-cout");
+let toysData=[];
 let cardData=[];
 
+fetch(`https://mock-apai.onrender.com/cart`)
+.then((res)=>{
+    return res.json();
+})
+.then((cdata)=>{
+    cartl.innerHTML=cdata.length;
+    //console.log(cardData)
+});
+// functionalities
 search.addEventListener("keydown",(e)=>{
     if (e.key == "Enter" && search.value != "") {
         //location.href = 'pages/results/results.html';
@@ -34,53 +43,45 @@ filt.addEventListener("change",()=>{
 btns.addEventListener("change",()=>{
     if(btns.value=="asc"){
         
-        employeedata.sort(function(a,b){return a.Rating-b.Rating});
-        display(employeedata);
+        toysData.sort(function(a,b){return a.Rating-b.Rating});
+        display(toysData);
     }
     else if(btns.value=="desc"){
-        employeedata.sort(function(a,b){return b.Rating-a.Rating});
-    display(employeedata);
+        toysData.sort(function(a,b){return b.Rating-a.Rating});
+    display(toysData);
     }
 })    
 btnp.addEventListener("click",()=>{
     if(btnp.value=="asc"){
-        employeedata.sort(function(a,b){return a.price-b.price});
-        display(employeedata)
+        toysData.sort(function(a,b){return a.price-b.price});
+        display(toysData)
     }
     else if(btnp.value=="desc"){
-        employeedata.sort(function(a,b){return b.price-a.price});
-        display(employeedata)
+        toysData.sort(function(a,b){return b.price-a.price});
+        display(toysData)
     }
    
 })    
-cartl.innerHTML=cardData.length;
+// display the cards
 fetchandrendercard(`?_page=${1}&_limit=12`)
 function fetchandrendercard(queryParamstring=null){
-    fetch(`https://mock-apai.onrender.com/cart`)
-.then((res)=>{
-    return res.json();
-})
-.then((data)=>{
-    cardData=data;
-})
-
     fetch(`${url}${queryParamstring ? queryParamstring:""}`,{
        method:"GET",
     
     })
     .then((res)=> {
         let totalCount=res.headers.get("X-Total-Count")
-        console.log("total",totalCount);
+        //console.log("total",totalCount);
         showpagination(totalCount,12)
         
         return res.json();
     })
     .then((data)=>{
-        console.log(data)
-        employeedata=data;
+        //console.log(data)
+        toysData=data;
        // showpagination(data.totalPages)
-        display(employeedata);
-        cartl.innerHTML=cardData.length;
+        display(toysData);
+        
     })
 }
 
@@ -102,7 +103,7 @@ function display(data){
         let btn=document.createElement("button");
         btn.innerText="Add to cart";
         btn.addEventListener("click",()=>{
-            // console.log(element);
+             console.log(element);
             // console.log(cardData)
              if(checkDuplicate(element)){
                  alert("Product is already in the cart");
@@ -114,12 +115,20 @@ function display(data){
                     body:JSON.stringify(element),
                     headers:{'content-type':'application/json'}
                 });
-                console.log(element)
+                
                 alert("Product added to the cart");
-                cartl.innerHTML=cardData.length;
-                console.log(cartl.innerHtml)
+                //cardData.length++
+                fetch(`https://mock-apai.onrender.com/cart`)
+                .then((x)=>{
+                    return x.json();
+                })
+                .then((data)=>{
+                    cartl.innerText=data.length;
+                })
+                console.log(cartl.innerHTML)
              }
         })
+        
         div2.append(title,price,rating,btn)
         card.append(im,div2);
         container.append(card)
@@ -127,6 +136,7 @@ function display(data){
 }
 
 function checkDuplicate(x){
+    //console.log(cardData[0].id)
     if(cardData.length===0){
         return false;
     }
@@ -140,7 +150,7 @@ function checkDuplicate(x){
 
 function showpagination(totalitems,x){
     const totalpages=Math.ceil(totalitems/x);
-    console.log(totalpages)
+    //console.log(totalpages)
     function renderbutton(){
         let arr=[];
         for(let i=0;i<totalpages;i++){
