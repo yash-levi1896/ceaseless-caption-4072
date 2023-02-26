@@ -5,9 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
+    <div class="Main_nav">
+        <img class="logo" src="logo for website.png" alt="" />
+  
+        <!-- links -->
+        <div class="links">
+          
+          
+          <div class="dropdown">
+            <button class="dropbtn">catagories 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="toys.html">Toys</a>
+              <a href="#">Food</a>
+              <a href="#">Pet</a>
+            </div>
+          </div> 
+          <a href="#">Coupons & Deals</a>
+          <a href="#">Weekly Ads</a>
+          <a href="#">Careers</a>
+        </div>
+  
+        <!-- search bar  -->
+        <div class="search-box">
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Search for a product"
+          />
+          <button class="search-btn"><i class="fa fa-search"></i></button>
+        </div>
+        <i class="fa fa-light fa-user"></i>
+        <h3 class="user">Sign In</h3>
+      </div>
+      <div class="side-filter">
+        <h4>My Store:</h4>
+        <p>2174 Gallatin Pike N</p>
+  
+        <i class="fa fa-light fa-cart-shopping">:<span id="cart-cout">0</span></i>
+      </div>
+<!-- Cards -->
     <div class="header" id="header">
         <h2 id="cart-total"></h2>
         <div class="cards" id="cards">
@@ -17,6 +62,96 @@
             <button class="checkout-btn"><a href="./payment.html">Proceed To Buy</a></button>
         </div>
     </div>
+    <div class="hide-alert">
+        <h1>Your Cart is Empty !</h1>
+        <h3>Start <a href="index.html">Shopping</a></h3>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-1">
+          <div class="footer-text">
+            <h4>DG Careers</h4>
+            <hr />
+            <p>About Us</p>
+            <p>Investor Information</p>
+            <p>Organizational Accounts</p>
+            <p>DG Me</p>
+            <p>Literacy Foundation</p>
+            <p>Newsroom</p>
+            <p>Real Estate</p>
+            <p>Alternative Dispute Resolution</p>
+            <p>New Vendors</p>
+            <p>Diverse Vendors/p></p>
+            <p>Vendors</p>
+            <p>Serving Others</p>
+          </div>
+  
+          <div>
+            <h4>Support</h4>
+            <hr />
+            <p>Help Center</p>
+            <p>Track My Order</p>
+            <p>Product Recalls</p>
+            <p>15% Student Discount</p>
+            <p>Gift Card Balance</p>
+            <p>Accessibility Statement</p>
+            <p>Accessibility Support</p>
+            <p>California Supply Chain Act</p>
+            <p>Your Privacy Choices</p>
+            <p>Cookie Preferences</p>
+          </div>
+  
+          <div>
+            <h4>Stores</h4>
+            <hr />
+            <p>Store Locator</p>
+            <p>Store Directory</p>
+            <p>Store Survey (receipt required)</p>
+            <p>DG Market</p>
+            <p>DG Market + pOpshelf</p>
+            <p>pOpshelf</p>
+            <p>DGx</p>
+          </div>
+  
+          <div>
+            <h4>Services</h4>
+            <hr />
+            <p>FedEx</p>
+            <p>DoorDash</p>
+            <p>DG Pickup</p>
+            <p>DG GO! & Cart Calculator</p>
+            <p>Download App</p>
+            <p>Coupons</p>
+            <p>spendwell</p>
+            <p>Western Union</p>
+          </div>
+        </div>
+        <!-- footer sites -->
+  
+        <div id="footer-logo">
+          <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/link-images/image.coreimg.100.300.png/1661991107545/foot-logo-dg-careers.png" alt="" />
+          <div id="apps_store">
+            <img class="image_one" src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image.coreimg.100.300.png/1661990967164/app-store.png"alt=""/>
+            <img id="image_two" src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image_205323551.coreimg.100.300.png/1661990917826/google.png"alt=""/>
+          </div>
+  
+          <div id="socail_media_icons">
+             <img src="https://cdn-icons-png.flaticon.com/512/4494/4494475.png" alt="">
+             <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="">
+             <img src="https://cdn-icons-png.flaticon.com/512/4494/4494488.png" alt="">
+             <img src="https://cdn-icons-png.flaticon.com/512/4494/4494497.png" alt="">
+             <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" alt="">
+             <img src="https://cdn-icons-png.flaticon.com/512/1076/1076995.png" alt="">
+          </div>
+  
+          <h3>Terms condition</h3>
+  
+          <p>© Copyright 2023. Dollar General Corporation. All rights reserved.</p>
+        </div>
+  
+       
+      </div>
 </body>
 </html>
 <script src="cart.js"></script>

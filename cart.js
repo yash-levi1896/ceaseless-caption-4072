@@ -61,3 +61,22 @@ function displayData (data) {
     });
 }
 
+///// => cart Count => ///
+let cart_cout = document.getElementById("cart-cout")
+console.log(cart_cout);
+
+    fetch(`https://mock-apai.onrender.com/cart`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        cart_cout.textContent=data.length;
+        if(data.length == 0){
+            document.getElementById('header').style.display = 'none';
+            document.querySelector('.hide-alert').style.display = 'block';
+        }
+    })
