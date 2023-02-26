@@ -11,6 +11,14 @@ let cartl=document.getElementById("cart-length");
 let employeedata=[];
 let cardData=[];
 
+fetch(`https://mock-apai.onrender.com/cart`)
+.then((res)=>{
+    return res.json();
+})
+.then((data)=>{
+    cardData=data;
+})
+
 search.addEventListener("keydown",(e)=>{
     if (e.key == "Enter" && search.value != "") {
         //location.href = 'pages/results/results.html';
@@ -53,17 +61,9 @@ btnp.addEventListener("click",()=>{
     }
    
 })    
-cartl.innerHTML=cardData.length;
+//cartl.innerHTML=cardData.length;
 fetchandrendercard(`?_page=${1}&_limit=12`)
 function fetchandrendercard(queryParamstring=null){
-    fetch(`https://mock-apai.onrender.com/cart`)
-.then((res)=>{
-    return res.json();
-})
-.then((data)=>{
-    cardData=data;
-})
-
     fetch(`${url}${queryParamstring ? queryParamstring:""}`,{
        method:"GET",
     
@@ -116,10 +116,11 @@ function display(data){
                 });
                 console.log(element)
                 alert("Product added to the cart");
-                cartl.innerHTML=cardData.length;
-                console.log(cartl.innerHtml)
+               
+                console.log(cardData.length)
              }
-        })
+        });
+        cartl.innerHTML=cardData.length;
         div2.append(title,price,rating,btn)
         card.append(im,div2);
         container.append(card)
