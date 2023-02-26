@@ -25,7 +25,9 @@ search.addEventListener("keydown",(e)=>{
 filt.addEventListener("change",()=>{
     if(filt.value==""){
     fetchandrendercard(`?_page=${1}&_limit=12`)
-    }else{
+    
+    }
+    else{
        fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${1}`)
     }
 });   
@@ -51,9 +53,17 @@ btnp.addEventListener("click",()=>{
     }
    
 })    
-
+cartl.innerHTML=cardData.length;
 fetchandrendercard(`?_page=${1}&_limit=12`)
 function fetchandrendercard(queryParamstring=null){
+    fetch(`https://mock-apai.onrender.com/cart`)
+.then((res)=>{
+    return res.json();
+})
+.then((data)=>{
+    cardData=data;
+})
+
     fetch(`${url}${queryParamstring ? queryParamstring:""}`,{
        method:"GET",
     
@@ -73,13 +83,6 @@ function fetchandrendercard(queryParamstring=null){
         cartl.innerHTML=cardData.length;
     })
 }
-fetch(`https://mock-apai.onrender.com/cart`)
-.then((res)=>{
-    return res.json();
-})
-.then((data)=>{
-    cardData=data;
-})
 
 
 function display(data){
@@ -90,7 +93,7 @@ function display(data){
         let im=document.createElement("img");
         im.src=element.image;
 
-        let title=document.createElement("h2");
+        let title=document.createElement("h4");
         title.innerText=element.title;
         let price=document.createElement("p");
         price.innerText=`Price: $ ${element.price}`;
@@ -114,6 +117,7 @@ function display(data){
                 console.log(element)
                 alert("Product added to the cart");
                 cartl.innerHTML=cardData.length;
+                console.log(cartl.innerHtml)
              }
         })
         div2.append(title,price,rating,btn)
@@ -158,10 +162,10 @@ function showpagination(totalitems,x){
             if(filt.value==""){
             fetchandrendercard(`?_page=${id}&_limit=12`)
             }
-            else if(filt.value=="art & craft"){
+            else if(filt.value=="art-craft"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
-            else if(filt.value=="Puzzle games & books"){
+            else if(filt.value=="Puzzle games-books"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
             else if(filt.value=="action-figure"){
@@ -170,7 +174,7 @@ function showpagination(totalitems,x){
             else if(filt.value=="Dolls"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
-            else if(filt.value=="Vehicle & Train"){
+            else if(filt.value=="Vehicle-Train"){
                 fetchandrendercard(`?category=${filt.value}&_limit=12&_page=${id}`)
             }
             

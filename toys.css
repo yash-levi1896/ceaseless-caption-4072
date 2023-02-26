@@ -182,6 +182,30 @@ display: block;
   font-size: 30px;
 }
 
+#filter{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 380px;
+  height:30px;
+  width: 200px;
+  border: 1px solid black;
+}
+#sortr{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  /* margin-left: 380px; */
+  height:30px;
+  width: 200px;
+  border: 1px solid black;
+}
+#sortp{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  /* margin-left: 380px; */
+  height:30px;
+  width: 200px;
+  border: 1px solid black;
+}
 
 
 
@@ -305,14 +329,63 @@ display: block;
 #container{
     display: grid;
     width: 60%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
     grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
     gap: 20px;
+    margin-bottom: 50px;
+    
 }
 #container img{
-  width:100%;
+  width:80%;
+  display: flex;
+  margin: auto;
+ 
 }
 #container>div{
-  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 20px;
+}
+#container>div h4{
+  text-align: center;
+}
+#container>div p{
+  margin-left: 10px;
+}
+#container>div:nth-child(1)>div>p:nth-child(3) {
+    margin-bottom: 30px;
+} 
+#container>div:nth-child(2)>div>p:nth-child(3) {
+    margin-bottom: 30px;
+} 
+#container>div:nth-child(4)>div>p:nth-child(3) {
+    margin-bottom: 30px;
+}
+#container button{
+  display: flex;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: yellow;
+}
+
+#button-wrapper{
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+   width:20%;
+   margin: auto;
+   padding: 10px;
+   border-radius: 10px;
+}
+#button-wrapper button{
+  padding:10px;
+  border-radius: 5px;
+  background-color: yellow;
+}
+#button-wrapper button:nth-child(10){
+  padding-left: 8px;
+  padding-right: 8px;
+}
+#button-wrapper button:hover{
+  background-color: black;
+  color: yellow;
 }
