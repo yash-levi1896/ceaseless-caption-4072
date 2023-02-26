@@ -16,6 +16,7 @@ fetch(`https://mock-apai.onrender.com/cart`)
     return res.json();
 })
 .then((cdata)=>{
+    cardData=cdata
     cartl.innerHTML=cdata.length;
     //console.log(cardData)
 });
@@ -103,30 +104,71 @@ function display(data){
         let btn=document.createElement("button");
         btn.innerText="Add to cart";
         btn.addEventListener("click",()=>{
-             console.log(element);
-            // console.log(cardData)
-             if(checkDuplicate(element)){
-                 alert("Product is already in the cart");
-             }
-             else{
-                element.quantity=1;
-                fetch(`https://mock-apai.onrender.com/cart`,{
-                    method:"POST",
-                    body:JSON.stringify(element),
-                    headers:{'content-type':'application/json'}
-                });
+           // let flag=false;
+             fetch(`https://mock-apai.onrender.com/cart`)
+             .then((y)=>{
+                 return y.json();
+             })
+             .then((data)=>{
+                // console.log(cardData)
+                if(checkDuplicate(element)){
+                    alert("Product is already in the cart")
+                   }
+                     else {
+       
+                        element.quantity=1;
+                        fetch(`https://mock-apai.onrender.com/cart`,{
+                            method:"POST",
+                            body:JSON.stringify(element),
+                            headers:{'content-type':'application/json'}
+                        })
+                        alert("Product added to the cart");
+                        //cardData.length++
+                        fetch(`https://mock-apai.onrender.com/cart`)
+                        .then((x)=>{
+                            return x.json();
+                        })
+                        .then((data)=>{
+                            cartl.innerText=data.length;
+                        })
+                    }
+                function checkDuplicate(x){
+                 //console.log(data)
+                 for(let i=0;i<data.length;i++){
+                     if(data[i].id==x.id){
+                          console.log("hi")
+                         return true;
+                     }
+                 }
+                 return false; 
+                }
                 
-                alert("Product added to the cart");
-                //cardData.length++
-                fetch(`https://mock-apai.onrender.com/cart`)
-                .then((x)=>{
-                    return x.json();
-                })
-                .then((data)=>{
-                    cartl.innerText=data.length;
-                })
-                console.log(cartl.innerHTML)
-             }
+            })
+            // if(checkDuplicate(element)){
+            //  alert("Product is already in the cart")
+            // }
+            //   else {
+
+            //      element.quantity=1;
+            //      fetch(`https://mock-apai.onrender.com/cart`,{
+            //          method:"POST",
+            //          body:JSON.stringify(element),
+            //          headers:{'content-type':'application/json'}
+            //      })
+            //     .catch((res)=>{
+            //        alert("Product is alreaady in the cart")
+            //     })
+            //      alert("Product added to the cart");
+            //      //cardData.length++
+            //      fetch(`https://mock-apai.onrender.com/cart`)
+            //      .then((x)=>{
+            //          return x.json();
+            //      })
+            //      .then((data)=>{
+            //          cartl.innerText=data.length;
+            //      })
+            //  }
+             
         })
         
         div2.append(title,price,rating,btn)
@@ -137,15 +179,24 @@ function display(data){
 
 function checkDuplicate(x){
     //console.log(cardData[0].id)
-    if(cardData.length===0){
+    let flag=
+    fetch(`https://mock-apai.onrender.com/cart`)
+    .then((y)=>{
+        return y.json();
+    })
+    .then((data)=>{
+       // console.log(cardData)
+        console.log(data)
+        for(let i=0;i<data.length;i++){
+            if(data[i].id==x.id){
+                 console.log("hi")
+                return true;
+            }
+        } 
         return false;
-    }
-    for(let i=0;i<cardData.length;i++){
-        if(cardData[i].id==x.id){
-            return true;
-        }
-    }
-    return false;
+   })
+    
+   
 }
 
 function showpagination(totalitems,x){
