@@ -5,13 +5,12 @@
     <link rel="icon" type="image/x-icon" href="./logo for website.png">
     <link rel="stylesheet" href="./login.css">
     <style>
-        
     </style>
 </head>
 <body>
     <div id="container">
         <div class="nav">
-             <a href="#" ><button class="button" style="color: black; width: 100%; border: none; font-size: 35px; margin-right: 20px; border-radius: 100%;">X</button></a>
+             <a href="./index.html" ><button class="submit" style="color: black; font-weight: 600; background-color: rgb(228,228,228); width: 100%; border: none; font-size: 35px; margin-right: 20px; border-radius: 100%;">X</button></a>
         </div>
         <form id="login">
             <img src="./logo for website.png" alt="">
@@ -20,7 +19,6 @@
             <input type="email"  placeholder="Email" id="email" required>
             <label for="password">Password*</label>
             <input type="password"  placeholder="Password" id="password" class="myInput" style="width: 100% ; display: inline;  " required>
-            <!-- <input type="checkbox" onclick="myFunction()" style="display: inline;"> -->
             <input type="submit" class ="submit" value="Sign In" id="signinbutton" >
             <input type="button" class="submit" id ="createAccount" value="Create Account">
             <input type="button" class="submit" id ="adminbutton1" value="Admin Login**" style="background-color: black; color: white; ">
@@ -38,8 +36,6 @@
             <input type="password" placeholder="Password" id ="password2" class="myInput" required>  
             <input type="submit" class ="submit" id="signupbutton" >
             <input type="button" class="submit" id ="adminbutton2" value="Admin Login**" style="background-color: black; color: white; ">
-
-            <!-- <input type="button" class ="submit" style="width: 80%; height: 5%; " value="Login"> -->
         </form>
         <form id="admin">
             <img src="./logo for website.png" alt="">
@@ -49,9 +45,9 @@
             <label for="password3" >Admin Password****</label>
             <input type="password"  placeholder="Password" id="password3" class="myInput" required>
             <input type="submit" class ="submit" >
+            <input type="button" class ="submit" value="Sign In" id="signinbutton1" >
         </form>
     </div>
-    
 </body>
 </html>
 <script src="login.js">
