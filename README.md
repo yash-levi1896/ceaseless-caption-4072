@@ -1,10 +1,10 @@
 # ceaseless-caption-4072
 Team Memebrs:
-1.Yash Gupta(Leader)
-2.Binod Okheda
-3.Md Kamran
-4.Praveen Yadav
-5.vishal Kumar Nigam
+1.Yash Gupta(Leader)                                                                                                                                                  
+2.Binod Okheda                                                                                                                                                         
+3.Md Kamran                                                                                                                                                             
+4.Praveen Yadav                                                                                                                                                         
+5.vishal Kumar Nigam                                                                                                                                                   
 
 Cloned the Dollar General website.
 server Deployed on render:https://mock-apai.onrender.com/
