@@ -6,9 +6,9 @@ Team Memebrs:
 4.Praveen Yadav                                                                                                                                                         
 5.vishal Kumar Nigam                                                                                                                                                   
 
-Cloned the Dollar General website.
-server Deployed on render:https://mock-apai.onrender.com/
-Website deployed on netlify:https://regal-naiad-de451c.netlify.app
+Cloned the Dollar General website.                                                                                                                                     
+server Deployed on render:https://mock-apai.onrender.com/                                                                                                               
+Website deployed on netlify:https://regal-naiad-de451c.netlify.app                                                                                                     
 
 
 In 5 days work done by team members:-
