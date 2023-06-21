@@ -8,7 +8,7 @@ Team Memebrs:
 
 Cloned the Dollar General website.                                                                                                                                     
 server Deployed on render:https://mock-apai.onrender.com/                                                                                                               
-Website deployed on netlify:https://regal-naiad-de451c.netlify.app                                                                                                     
+Website deployed on netlify:https://fanciful-melomakarona-a927df.netlify.app/                                                                                                     
 
 
 In 5 days work done by team members:-
